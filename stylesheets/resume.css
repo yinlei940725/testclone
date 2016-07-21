@@ -1,0 +1,93 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x:hidden;
+    /*background:url("../images/background/background.jpg") no-repeat;
+    background-size:cover;*/
+}
+
+#backcanvas {
+    position:absolute;
+    z-index:-1;
+    top:0;
+}
+
+p {
+    font-family: 'Courier New';
+}
+
+h4, h5, span {
+    font-weight: bold;
+}
+
+.active {
+    height: 35px;
+}
+
+.fixed-code {
+    width:200px;
+    display: block;
+    position: fixed;
+    z-index: 2;
+    right: 10px;
+    bottom: 30px;
+}
+
+    .fixed-code .small-screen-hide {
+        display: none;
+    }
+
+        .fixed-code .small-screen-hide .print, .fixed-code .small-screen-hide .download {
+            width:98px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background-color: #e8e8e8;
+            cursor:pointer;
+            margin-bottom:3px;
+            display:inline-block;
+        }
+
+        .fixed-code .small-screen-hide a {
+            color:black;
+        }
+            .fixed-code .small-screen-hide .print:hover {
+                background-color: #ddd;
+            }
+
+            .fixed-code .small-screen-hide .download:hover {
+                background-color: #ddd;
+            }
+
+    .fixed-code .gotop {
+        display:none;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        background-color: #e8e8e8;
+        cursor:pointer;
+        float:right;
+    }
+
+        .fixed-code .gotop:hover {
+            background-color: #ddd;
+        }
+
+@media only screen and (min-width:1024px) {
+    .fixed-code .small-screen-hide {
+        display: block;
+    }
+}
+
+@media only print {
+    .fixed-code {
+        display:none;
+    }
+}
+
+.table {
+    box-shadow:0 2px 15px rgba(0,0,0,.2);
+    margin-bottom:50px;
+    z-index:1;
+}
