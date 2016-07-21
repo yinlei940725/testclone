@@ -99,8 +99,39 @@
             <span class="glyphicon glyphicon-arrow-up"></span>
         </div>
     </div>
+	<script src="script/jquery-2.1.1.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/custom-plug-in.js"></script>
 	<script>
-	alert(1);
+	$(function () {
+            $(".typewriter").typewriter();
+
+            //var canvas = document.getElementById("backcanvas");
+            //$.flowmolecule(canvas, null, null, 50, 2, "rgba(198, 47, 47, 1)", 50000, { r: 198, g: 47, b: 47 });
+        });
+        
+        $(window).scroll(function () {
+            var stop = $(document).scrollTop();
+            stop > 0 ? $(".fixed-code .gotop").show() : $(".fixed-code .gotop").hide();
+        });
+
+        function btnprint() {
+            //var headstr = "<html><head><title>打印预览</title></head><body>";
+            //var footstr = "</body>";
+            //var newstr = document.getElementById('table').outerHTML;
+            //alert(newstr);
+            //w = window.open("", "_blank", "width=800,height=600");
+            //w.document.write(headstr + newstr + footstr);
+            //w.window.print();
+            //return false;
+            window.print();
+        }
+
+        function gotop() {
+            $("html,body").animate({
+                scrollTop: 0
+            }, 500);
+        }
 	</script>
 </body>
 </html>
